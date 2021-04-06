@@ -1,0 +1,12 @@
+# Marcos Vera 
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Unload unused filesystems
+    copy:
+       dest: "/etc/modprobe.d/CIS.conf"
+       content:
+          "install cramfs /bin/true\ninstall freevxfs /bin/true\ninstall jffs2 /bin/true\ninstall hfs /bin/true\ninstall hfsplus /bin/true\ninstall udf /bin/true\ninstall squashfs /bin/true\ninstall dccp /bin/true\ninstall sctp /bin/true\ninstall rds /bin/true\ninstall tipc /bin/true\ninstall vfat /bin/true\ninstall msdos /bin/true\ninstall fat /bin/true\ninstall minix /bin/true\ninstall btrfs /bin/true\n"
+       owner: root
+       group: root
+       mode: 0644
