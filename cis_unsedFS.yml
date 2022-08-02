@@ -1,5 +1,5 @@
 # Marcos Vera 
-- hosts: node1
+- hosts: node
   become: true
   tasks:
   - name: Unload unused filesystems
